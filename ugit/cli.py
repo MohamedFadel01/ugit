@@ -1,4 +1,6 @@
 import argparse
+import os
+from . import data
 
 
 def main():
@@ -19,6 +21,6 @@ def parse_args():
 
 
 def init(args):
-    print("Hello, World!")
-    
+    data.init()
+    print(f"Initialized empty ugit repository in {os.getcwd()}/{data.GIT_DIR}")    
     
