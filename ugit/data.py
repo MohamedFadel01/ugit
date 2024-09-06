@@ -18,3 +18,8 @@ def hash_object(data):
         
     return oid
     
+    
+    
+def get_object(oid):
+    with open(f"{GIT_DIR}/objects/{oid}", "rb") as f:
+        return f.read()
