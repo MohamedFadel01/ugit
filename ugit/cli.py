@@ -2,7 +2,7 @@ import argparse
 import os
 import sys
 
-from . import data
+from . import base, data
 
 
 def main():
