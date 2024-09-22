@@ -82,6 +82,11 @@ def read_tree(oid):
 
 def commit(message):
     commit = f"tree {write_tree()}\n"
+
+    HEAD = data.get_head()
+    if HEAD:
+        commit += f"parent  {HEAD}"
+
     commit += "\n"
     commit += f"{message}"
 
