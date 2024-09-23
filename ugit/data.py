@@ -14,7 +14,7 @@ def set_HEAD(oid):
         f.write(oid)
 
 
-def get_head():
+def get_HEAD():
     if os.path.isfile(f"{GIT_DIR}/HEAD"):
         with open(f"{GIT_DIR}/HEAD") as f:
             return f.read().strip()
